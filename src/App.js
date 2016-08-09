@@ -9,8 +9,7 @@ class AppComponent extends Component {
 	}
 
 	render(){
-		let href = this.props.href?this.props.href:'test.html';
-		href = 'test.html';
+		
 		return (
 			<div>
 				<NavLink linkArr={this.props.navData} />	

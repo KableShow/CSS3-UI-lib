@@ -98,12 +98,9 @@ const navData = [{
 				}];
 
 let store = createStore(CSS3App);
-let iframeHref= store.getState(iframeHref);
-console.log(iframeHref['iframeHref']); 
-let href = iframeHref['iframeHref'] === ''?'test.html':iframeHref['iframeHref'];
 
 render((
 	<Provider store={store}>
-		<App navData={navData} href={href}/>
+		<App navData={navData} />
 	</Provider>
 ),document.getElementById('app'));

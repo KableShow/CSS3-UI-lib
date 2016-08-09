@@ -12,7 +12,9 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		onClickChange: (e) => {
 			let href = e.target.getAttribute('href');
-			dispatch(changeIframe(href));
+			if(href !== '#' && href !== ' '){
+				dispatch(changeIframe(href));
+			}
 			e.preventDefault();
 		}
 	}

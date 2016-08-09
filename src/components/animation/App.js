@@ -19,6 +19,10 @@ export default class App extends Component{
 	componentDidMount(){
 		this._nav.addEventListener('click',(function(e){
 			let dom = e.target;
+			if(dom.nodeType !== 1 || dom.nodeName !== 'A'){
+				e.preventDefault();
+				return;
+			}
 			let nowDemo = this.state.currentDemo;
 			let demo = parseInt(dom.getAttribute('data-demo'));
 			if(demo !== nowDemo){
