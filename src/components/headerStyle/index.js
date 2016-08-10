@@ -42,8 +42,8 @@ export default class HeaderStyle extends Component {
 
         return (
             <header>
-                <h1><strong>Circle</strong> Hover Effects</h1>
-                <h2>Pretty hover effects on circle with CSS Transitions</h2>
+                <h1><strong>{this.props.h1Text}</strong></h1>
+                <h2>{this.props.h2Text}</h2>
                 <nav ref={(c) => this._nav = c} >
                 {aLinkArr}
                 </nav>

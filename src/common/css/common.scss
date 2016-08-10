@@ -1,63 +1,119 @@
+.container {
+    text-align: center;
+    padding: 20px 0;
+
+    &>header {
+
+        & h1 {
+            font-size: 32px;
+            line-height: 32px;
+            font-weight: 300;
+            color: #777;
+            text-shadow: 1px 1px 1px rgba(255,255,255,0.7);
+        }
+
+        & h2 {
+            font-size: 14px;
+            font-weight: 300;
+            font-style: italic;
+            padding: 15px 0 5px 0;
+            color: #888;
+            text-shadow: 1px 1px 1px rgba(255,255,255,0.9);
+        }
+
+        & a {
+            display: inline-block;
+            font-style: italic;
+            margin: 0 4px;
+            padding: 0 6px;
+            color: #aaa;
+            line-height: 20px;
+            font-size: 13px;
+            text-shadow: 1px 1px 1px #fff;
+            border: 1px solid #fff;
+            background: -webkit-linear-gradient(top,#fff 0%, #f6f6f6 47%, #ededed 100%);
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+
+            &:hover {
+                background: #ccc;
+                color: #000;
+            }
+        }
+
+        & .current-demo {
+            background: #f0f0f0;
+            border-color: #d9d9d9;
+
+            &:hover {
+                background: #f0f0f0;
+                border-color: #d9d9d9;
+                color: #aaa;
+            }
+        }
+    }
+}
+
 .commonShowBox {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	overflow-x: hidden;
 
-	&>div{
-		height: 100%;
-		position: relative;
-		left: 0%;
-		transition: all 0.3s ease-in-out;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
 
-		&:after {
-			content: " ";
-			display: block;
-			clear: both;
-		}
+    &>div{
+        height: 100%;
+        position: relative;
+        left: 0%;
+        transition: all 0.3s ease-in-out;
 
-		&>div{
-			height: 100%;
-			float: left;
+        &:after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
 
-			&>div{
-				margin: 0 auto;
-				height: 100%;
-				padding: 20px 0 40px 0;
-				box-sizing: border-box;
+        &>div{
+            height: 100%;
+            float: left;
 
-				&::after {
-					content: " ";
-					display: block;
-					clear: both;
-				}
+            &>div{
+                margin: 0 auto;
+                height: 100%;
+                padding: 20px 0 40px 0;
+                box-sizing: border-box;
 
-				& .styleGroup {
-					float: left;
-					margin: 0 20px;
-				}
+                &::after {
+                    content: " ";
+                    display: block;
+                    clear: both;
+                }
 
-				& .cssCodeBox {
-					float: left;
-					margin:0 20px;
-					height: 100%;
-					border-left: 1px dashed #000;
-					overflow-y: scroll;
+                & .styleGroup {
+                    float: left;
+                    margin: 0 20px;
+                }
 
-					&::-webkit-scrollbar {
-						width: 5px;
-						height: 10px;
-						background: transparent;
-					}
+                & .cssCodeBox {
+                    float: left;
+                    margin:0 20px;
+                    height: 100%;
+                    border-left: 1px dashed #000;
+                    overflow-y: scroll;
 
-					&::-webkit-scrollbar-thumb {
-						border-radius: 10px;
-						background: #ccc;
-					}
-				}
-			}
+                    &::-webkit-scrollbar {
+                        width: 5px;
+                        height: 10px;
+                        background: transparent;
+                    }
 
-		}
-	}
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 10px;
+                        background: #ccc;
+                    }
+                }
+            }
+
+        }
+    }
 }

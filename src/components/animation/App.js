@@ -30,6 +30,8 @@ export default class App extends Component{
 			<div className="container">
                 <HeaderStyle num={NUM} nowDemo={this.state.currentDemo}
                     changeDemo={(num) => this.setState({currentDemo:num})}
+                    h1Text={'Circle Hover Effects'}
+                    h2Text={'Pretty hover effects on circle with CSS Transitions'}
                 />
 				<div id="showBox" className="commonShowBox" style={{top:'120px'}}>
 					<div className="showBoxList" style={styleObj}>
