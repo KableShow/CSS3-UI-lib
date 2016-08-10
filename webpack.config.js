@@ -5,9 +5,12 @@ module.exports = {
     entry: {
         vendor: ['react','redux','react-redux'],
         circleIndex: [ 
+            './src/components/animation/index.js',
+        ],
+        aniBtnIndex: [
             'webpack-dev-server/client?http://localhost:3000',
             'webpack/hot/only-dev-server',
-            './src/components/animation/index.js',
+            './src/components/animatedButton/aniBtnIndex.js',
         ],
         index: [
             './src/index'
@@ -31,6 +34,9 @@ module.exports = {
             },{
             test: /\.scss$/,
             loader: 'style!css!sass'
+            },{
+            test: /\.css$/,
+            loader: 'style!css!'
             },{
             test: /\.(jpg|png)$/,
             loader: "url?limit=8192"
